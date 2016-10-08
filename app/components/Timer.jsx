@@ -31,6 +31,9 @@ var Timer = React.createClass({
       }
     }
   },
+  componentWillUnmount: function () {
+    clearInterval(this.timer);
+  },
   handleStatusChange: function (newStatus) {
     this.setState({
       timerStatus: newStatus
